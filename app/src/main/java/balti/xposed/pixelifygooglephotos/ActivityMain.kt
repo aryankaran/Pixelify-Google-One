@@ -60,7 +60,7 @@ class ActivityMain: AppCompatActivity(R.layout.activity_main) {
     private fun showRebootSnack(){
         if (pref == null) return // don't display snackbar if module not active.
         val rootView = findViewById<ScrollView>(R.id.root_view_for_snackbar)
-        Snackbar.make(rootView, R.string.please_force_stop_google_photos, Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(rootView, R.string.please_force_stop_google_one, Snackbar.LENGTH_SHORT).show()
     }
 
     /**
@@ -81,7 +81,7 @@ class ActivityMain: AppCompatActivity(R.layout.activity_main) {
     /**
      * Activity launcher for [FeatureCustomize] activity.
      * If user presses "Save" on [FeatureCustomize] activity, then result code is RESULT_OK.
-     * Then show prompt to force stop Google Photos.
+     * Then show prompt to force stop Google One.
      */
     private val childActivityLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
@@ -122,10 +122,10 @@ class ActivityMain: AppCompatActivity(R.layout.activity_main) {
         val customizeFeatureFlags = findViewById<LinearLayout>(R.id.customize_feature_flags)
         val featureFlagsChanged = findViewById<TextView>(R.id.feature_flags_changed)
         val overrideROMFeatureLevels = findViewById<SwitchCompat>(R.id.override_rom_feature_levels)
-        val switchEnforceGooglePhotos = findViewById<SwitchCompat>(R.id.spoof_only_in_google_photos_switch)
+        val switchEnforceGooglePhotos = findViewById<SwitchCompat>(R.id.spoof_only_in_google_one_switch)
         val deviceSpooferSpinner = findViewById<Spinner>(R.id.device_spoofer_spinner)
-        val forceStopGooglePhotos = findViewById<Button>(R.id.force_stop_google_photos)
-        val openGooglePhotos = findViewById<ImageButton>(R.id.open_google_photos)
+        val forceStopGooglePhotos = findViewById<Button>(R.id.force_stop_google_one)
+        val openGooglePhotos = findViewById<ImageButton>(R.id.open_google_one)
         val advancedOptions = findViewById<TextView>(R.id.advanced_options)
         val telegramLink = findViewById<TextView>(R.id.telegram_group)
         val updateAvailableLink = findViewById<TextView>(R.id.update_available_link)
@@ -227,14 +227,14 @@ class ActivityMain: AppCompatActivity(R.layout.activity_main) {
          * See [Utils.forceStopPackage].
          */
         forceStopGooglePhotos.setOnClickListener {
-            utils.forceStopPackage(Constants.PACKAGE_NAME_GOOGLE_PHOTOS, this)
+            utils.forceStopPackage(Constants.PACKAGE_NAME_GOOGLE_ONE, this)
         }
 
         /**
          * See [Utils.openApplication].
          */
         openGooglePhotos.setOnClickListener {
-            utils.openApplication(Constants.PACKAGE_NAME_GOOGLE_PHOTOS, this)
+            utils.openApplication(Constants.PACKAGE_NAME_GOOGLE_ONE, this)
         }
 
         /**

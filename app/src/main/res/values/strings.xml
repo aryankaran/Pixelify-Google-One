@@ -11,7 +11,7 @@
     changelog
     -->
 
-    <string name="app_name">Pixelify GPhotos</string>
+    <string name="app_name">Pixelify Google One</string>
 
     <!--activity_main.xml-->
     <string name="reset">Reset</string>
@@ -19,13 +19,13 @@
     <string name="spoofs_build_and_features">Spoofs build.prop and feature flags.</string>
     <string name="customize_feature_flags">Customize feature flags.</string>
     <string name="feature_flags_changed">Feature flags changed!</string>
-    <string name="spoof_only_in_google_photos">Make sure to spoof only in Google Photos.</string>
-    <string name="spoof_only_in_google_photos_desc">In LSPosed, the module is by default only activated for Google Photos.
+    <string name="spoof_only_in_google_one">Make sure to spoof only in Google One.</string>
+    <string name="spoof_only_in_google_one_desc">In LSPosed, the module is by default only activated for Google One.
     If you want to use it in other apps, then keep this toggle <b>OFF</b>.</string>
     <string name="override_rom_feature_levels">Override ROM feature levels.</string>
     <string name="override_rom_feature_levels_desc">Pass false to hooked method for higher feature levels present in ROM
     if user selects a lower Pixel feature level. <b>(Recommended)</b></string>
-    <string name="force_stop_google_photos">Force stop\nGoogle Photos</string>
+    <string name="force_stop_google_one">Force stop\nGoogle One</string>
     <string name="module_not_enabled">
         \n
         Looks like the this app module is not enabled.\n
@@ -33,7 +33,7 @@
         If already enabled, then just reboot. If that does not work, kindly uninstall and reinstall.
     </string>
     <string name="close">Close</string>
-    <string name="open_google_photos">Open Google Photos</string>
+    <string name="open_google_one">Open Google One</string>
     <string name="telegram_group">Telegram group!</string>
     <string name="update_available">App update available!</string>
 
@@ -49,7 +49,7 @@
     <string name="changelog">Change log</string>
 
     <!--ActivityMain.xml-->
-    <string name="please_force_stop_google_photos">Please force stop Google Photos to take effect.</string>
+    <string name="please_force_stop_google_one">Please force stop Google One to take effect.</string>
     <string name="export_config">Export configuration</string>
     <string name="export_config_desc">Save or share your settings of this module with others.\n
         \"Save\" will prompt to select a location to export the settings as a JSON file.
@@ -77,7 +77,7 @@
     <string name="spoof_android_version_desc">Do not set an Android version greater than your current version.\n
         Example, if your Android version is <b>Pie</b>, you can set <b>Nougat / Oreo / Pie</b>, but not Q / R / S.
     </string>
-    <string name="this_might_cause_crash">This might cause Google Photos to immediately crash!</string>
+    <string name="this_might_cause_crash">This might cause Google One to immediately crash!</string>
     <string name="dont_spoof_android_version">Don\'t spoof Android version <b>(Recommended)</b></string>
     <string name="follow_spoof_device_version">Follow spoof device Android version.</string>
     <string name="manually_set_android_version">Manually set Android version.</string>

@@ -25,7 +25,7 @@ object DeviceProps {
      * @param displayName String to show to user to customize flag selection. Example "Pixel 2020"
      * Also note that these display names are what is actually stored in shared preferences.
      * The actual feature flags are then derived from the display names.
-     * @param featureFlags List of actual features spoofed to Google Photos for that particular [displayName].
+     * @param featureFlags List of actual features spoofed to Google One for that particular [displayName].
      * Example, for [displayName] = "Pixel 2020", [featureFlags] = listOf("com.google.android.feature.PIXEL_2020_EXPERIENCE")
      */
     class Features(
@@ -50,51 +50,56 @@ object DeviceProps {
     val allFeatures = listOf(
 
         Features("Pixel 2016", // Pixel XL
-            "com.google.android.apps.photos.NEXUS_PRELOAD",
-            "com.google.android.apps.photos.nexus_preload",
+            "com.google.android.apps.subscriptions.red.NEXUS_PRELOAD",
+            "com.google.android.apps.subscriptions.red.nexus_preload",
             "com.google.android.feature.PIXEL_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_PRELOAD",
-            "com.google.android.apps.photos.PIXEL_2016_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2016_PRELOAD",
         ),
 
         Features("Pixel 2017", // Pixel 2
             "com.google.android.feature.PIXEL_2017_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2017_PRELOAD"
+            "com.google.android.apps.subscriptions.red.PIXEL_2017_PRELOAD"
         ),
 
         Features("Pixel 2018", // Pixel 3 XL
             "com.google.android.feature.PIXEL_2018_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2018_PRELOAD"
+            "com.google.android.apps.subscriptions.red.PIXEL_2018_PRELOAD"
         ),
 
         Features("Pixel 2019 mid-year", // Pixel 3a XL
             "com.google.android.feature.PIXEL_2019_MIDYEAR_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2019_MIDYEAR_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2019_MIDYEAR_PRELOAD",
         ),
 
         Features("Pixel 2019", // Pixel 4 XL
             "com.google.android.feature.PIXEL_2019_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2019_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2019_PRELOAD",
         ),
 
         Features("Pixel 2020 mid-year", // Pixel 4a
             "com.google.android.feature.PIXEL_2020_MIDYEAR_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2020_MIDYEAR_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2020_MIDYEAR_PRELOAD",
         ),
 
         Features("Pixel 2020", // Pixel 5
             "com.google.android.feature.PIXEL_2020_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2020_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2020_PRELOAD",
         ),
 
         Features("Pixel 2021 mid-year", // Pixel 5a
             "com.google.android.feature.PIXEL_2021_MIDYEAR_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2021_MIDYEAR_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2021_MIDYEAR_PRELOAD",
         ),
 
         Features("Pixel 2021", // Pixel 6 Pro
             "com.google.android.feature.PIXEL_2021_EXPERIENCE",
-            "com.google.android.apps.photos.PIXEL_2021_PRELOAD",
+            "com.google.android.apps.subscriptions.red.PIXEL_2021_PRELOAD",
+        ),
+
+        Features("Pixel 2022", // Pixel 7 Pro
+            "com.google.android.feature.PIXEL_2022_EXPERIENCE",
+            "com.google.android.apps.subscriptions.red.PIXEL_2021_PRELOAD",
         ),
     )
 
@@ -142,6 +147,7 @@ object DeviceProps {
         AndroidVersion("Q 10.0", "10", 29),
         AndroidVersion("R 11.0", "11", 30),
         AndroidVersion("S 12.0", "12", 31),
+        AndroidVersion("T 13.0", "13", 33),
     )
 
     /**
@@ -287,6 +293,19 @@ object DeviceProps {
             "Pixel 2021",
             getAndroidVersionFromLabel("S 12.0"),
         ),
+
+        DeviceEntries(
+            "Pixel 7 Pro", hashMapOf(
+                Pair("BRAND", "google"),
+                Pair("MANUFACTURER", "Google"),
+                Pair("DEVICE", "cheetah"),
+                Pair("PRODUCT", "cheetah"),
+                Pair("MODEL", "Pixel 7 Pro"),
+                Pair("FINGERPRINT", "google/cheetah/cheetah:13/TQ1A.230105.002/9325679:user/release-keys"),
+            ),
+            "Pixel 2022",
+            getAndroidVersionFromLabel("T 13.0"),
+        ),
     )
 
     /**
@@ -307,11 +326,11 @@ object DeviceProps {
     /**
      * Default name of device to spoof.
      */
-    val defaultDeviceName = "Pixel 5"
+    val defaultDeviceName = "Pixel 7 Pro"
 
     /**
      * Default feature level to spoof up to. Corresponds to what is expected for the device in [defaultDeviceName].
      */
-    val defaultFeatures = getFeaturesUpTo("Pixel 2020")
+    val defaultFeatures = getFeaturesUpTo("Pixel 2022")
 
 }

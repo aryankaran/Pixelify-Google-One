@@ -2,7 +2,7 @@ package balti.xposed.pixelifygooglephotos
 
 import android.os.Build
 import android.util.Log
-import balti.xposed.pixelifygooglephotos.Constants.PACKAGE_NAME_GOOGLE_PHOTOS
+import balti.xposed.pixelifygooglephotos.Constants.PACKAGE_NAME_GOOGLE_ONE
 import balti.xposed.pixelifygooglephotos.Constants.PREF_DEVICE_TO_SPOOF
 import balti.xposed.pixelifygooglephotos.Constants.PREF_ENABLE_VERBOSE_LOGS
 import balti.xposed.pixelifygooglephotos.Constants.PREF_SPOOF_ANDROID_VERSION_FOLLOW_DEVICE
@@ -79,7 +79,7 @@ class DeviceSpoofer: IXposedHookLoadPackage {
          * then check package name and return if necessary.
          */
         if (pref.getBoolean(PREF_STRICTLY_CHECK_GOOGLE_PHOTOS, true) &&
-            lpparam?.packageName != PACKAGE_NAME_GOOGLE_PHOTOS) return
+            lpparam?.packageName != PACKAGE_NAME_GOOGLE_ONE) return
 
         log("Loaded DeviceSpoofer for ${lpparam?.packageName}")
         log("Device spoof: ${finalDeviceToSpoof?.deviceName}")

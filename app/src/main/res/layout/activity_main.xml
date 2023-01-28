@@ -148,14 +148,14 @@
         <androidx.appcompat.widget.SwitchCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/spoof_only_in_google_photos"
+            android:text="@string/spoof_only_in_google_one"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/spoof_only_in_google_photos_switch"/>
+            android:id="@+id/spoof_only_in_google_one_switch"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/spoof_only_in_google_photos_desc"
+            android:text="@string/spoof_only_in_google_one_desc"
             android:textAppearance="?android:attr/textAppearanceSmall"/>
 
         <Space
@@ -223,22 +223,22 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/force_stop_google_photos"
+                android:text="@string/force_stop_google_one"
                 android:elevation="3dp"
-                android:id="@+id/force_stop_google_photos"
+                android:id="@+id/force_stop_google_one"
                 />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/force_stop_google_photos"
-                android:layout_alignTop="@id/force_stop_google_photos"
-                android:layout_alignBottom="@id/force_stop_google_photos"
+                android:layout_toEndOf="@id/force_stop_google_one"
+                android:layout_alignTop="@id/force_stop_google_one"
+                android:layout_alignBottom="@id/force_stop_google_one"
                 android:backgroundTint="?android:attr/colorPrimary"
-                android:contentDescription="@string/open_google_photos"
+                android:contentDescription="@string/open_google_one"
                 android:src="@drawable/ic_open"
                 android:elevation="3dp"
-                android:id="@+id/open_google_photos"
+                android:id="@+id/open_google_one"
                 />
 
         </RelativeLayout>
