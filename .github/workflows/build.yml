@@ -44,5 +44,5 @@ jobs:
     - name: Upload built apk
       uses: actions/upload-artifact@v3
       with:
-        name: Pixelify-Google-One-ci-${{ env.VERSION }}.apk
+        name: Pixelify-Google-One-CI-${{ env.VERSION }}
         path: ${{ github.workspace }}/app/build/outputs/apk/release/Pixelify-Google-One-CI-${{ env.VERSION }}.apk

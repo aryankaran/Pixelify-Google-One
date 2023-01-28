@@ -31,8 +31,8 @@ class FeatureSpoofer: IXposedHookLoadPackage {
      * Simple message to log messages in lsposed log as well as android log.
      */
     private fun log(message: String){
-        XposedBridge.log("PixelifyGooglePhotos: $message")
-        Log.d("PixelifyGooglePhotos", message)
+        XposedBridge.log("PixelifyGoogleOne: $message")
+        Log.d("PixelifyGoogleOne", message)
     }
 
     /**
