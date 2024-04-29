@@ -105,7 +105,7 @@ class ActivityMain: AppCompatActivity(R.layout.activity_main) {
         /**
          * Check if [pref] is not null. If it is, then module is not enabled.
          */
-        if (pref == null){
+        if (pref != null){
             AlertDialog.Builder(this)
                 .setMessage(R.string.module_not_enabled)
                 .setPositiveButton(R.string.close) {_, _ ->
